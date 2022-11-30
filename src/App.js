@@ -1,6 +1,9 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
+import Book from "./components/Book";
 import AppContainer from "./components/UI/AppContainer";
+import BookView from "./components/UI/BookView";
+import Sidebar from "./components/UI/Sidebar";
 
 const App = () => {
   const books = [
@@ -33,11 +36,12 @@ const App = () => {
       dateCompleted: new Date(2015, 8, 2),
     },
   ];
-  console.log(books);
+  // console.log(books);
   return (
-    <div>
-      <AppContainer />
-    </div>
+    <AppContainer>
+      <Sidebar />
+      <BookView books={books} />
+    </AppContainer>
   );
 };
 
