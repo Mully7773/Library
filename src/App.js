@@ -1,8 +1,8 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import TestComp from "./components/TestComp";
+import AppContainer from "./components/UI/AppContainer";
 
-function App() {
+const App = () => {
   const books = [
     {
       id: uuidv4(),
@@ -36,9 +36,9 @@ function App() {
   console.log(books);
   return (
     <div>
-      <TestComp />
+      <AppContainer />
     </div>
   );
-}
+};
 
 export default App;
