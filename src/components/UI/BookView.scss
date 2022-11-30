@@ -1,4 +1,8 @@
 .book-view {
   flex: 1;
-  background-color: orange;
+  background-color: var(--color-grey-light-3);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5.2rem;
+  padding: 2.4rem;
 }

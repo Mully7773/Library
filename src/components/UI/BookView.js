@@ -5,7 +5,6 @@ const BookView = (props) => {
   console.log(props);
   return (
     <div className="book-view">
-      <p>Book View</p>
       <Book
         title={props.books[0].bookTitle}
         author={props.books[0].bookAuthor}
