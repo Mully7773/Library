@@ -1,0 +1,19 @@
+.book-description {
+  &__book-title {
+    display: inline-block;
+    background-image: linear-gradient(to right, #007ea7, #006586);
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.1rem;
+    font-size: 2.1rem;
+  }
+
+  &__book-author {
+    font-size: 1.6rem;
+  }
+  &__book-pages {
+  }
+
+  &__date {
+  }
+}
