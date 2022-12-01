@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" fill="var(--color-grey-light-3)" height='10rem' id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" fill="url(#grad1)" height='10rem' id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2048 2048" enable-background="new 0 0 2048 2048" xml:space="preserve">
 <g id="_x23_fffffffe">
 	<path d="M1103.6801,77.67c4.2999-10.78,20.45-12.64,28.0499-4.38c6.37,7.04,9,16.45,11.5701,25.37
@@ -779,4 +779,11 @@
 		c0.4299-3.83-1.4401-7.37-2.72-10.85C1212.36,1265.74,1208.4301,1259.0601,1204.71,1252.33z"/>
 	<path d="M562.09,1271.1899C565.35,1271.33,560.59,1274.2,562.09,1271.1899z"/>
 </g>
+<defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:var(--color-secondary);stop-opacity:2" />
+      <stop offset="90%" style="stop-color:var(--color-secondary-light);stop-opacity:1" />
+    </linearGradient>
+  </defs>
 </svg>
+

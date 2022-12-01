@@ -9,6 +9,14 @@
     font-size: 2rem;
     margin-left: -3.2rem;
     margin-top: 7.1rem;
+    background-image: linear-gradient(
+      15deg,
+      var(--color-secondary),
+      var(--color-secondary-light) 60%
+    );
+
+    background-clip: text;
+    color: transparent;
   }
 
   .capital-text {
