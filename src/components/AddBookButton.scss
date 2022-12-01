@@ -1,0 +1,43 @@
+.add-book-button-container {
+  align-self: center;
+  &__button {
+    border-radius: 0.1rem;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    border: none;
+    padding: 0.8rem 3.2rem;
+    position: relative;
+
+    background: linear-gradient(
+      15deg,
+      var(--color-secondary),
+      var(--color-secondary-light-2) 60%
+    );
+    transition: all 1s ease-in;
+    z-index: 1;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(
+        200deg,
+        var(--color-primary-light),
+        var(--color-secondary) 90%
+      );
+      z-index: -1;
+      transition: opacity 0.3s linear;
+      opacity: 0;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
