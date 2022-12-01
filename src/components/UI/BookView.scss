@@ -1,6 +1,17 @@
 .book-view-container {
   background-color: var(--color-grey-light-3);
   flex: 1;
+  background-image: url(../img/tanalee-youngblood-CMdQcxsWZE0-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0rem -10rem;
+  background-blend-mode: luminosity;
+  transition: all 3s;
+  // background: url("../img/Annasblommor-green.svg") top no-repeat;
+  // background-size: cover;
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 .book-view-container__heading {
