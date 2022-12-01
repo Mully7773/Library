@@ -1,6 +1,17 @@
-.book-view {
-  flex: 1;
+.book-view-container {
   background-color: var(--color-grey-light-3);
+  flex: 1;
+}
+
+.book-view-container__heading {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  padding-top: 2.2rem;
+  line-height: 1;
+  color: var(--color-primary-light);
+}
+
+.book-view {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5.2rem;

@@ -1,4 +1,5 @@
 .book-description {
+  position: relative;
   &__book-title {
     display: inline-block;
     background-image: linear-gradient(to right, #007ea7, #006586);
@@ -8,12 +9,44 @@
     font-size: 2.1rem;
   }
 
+  &__by-text {
+    font-style: italic;
+    font-size: 1.4rem;
+  }
+
   &__book-author {
     font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
   }
   &__book-pages {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-grey-dark-1);
   }
 
   &__date {
+    font-size: 1.2rem;
+    color: var(--color-grey-dark-1);
+  }
+
+  .x-container {
+    &__button {
+      position: absolute;
+      right: -1.2rem;
+      top: -1.2rem;
+      border: none;
+      background-color: transparent;
+      font-size: 2.4rem;
+      cursor: pointer;
+      color: var(--color-primary);
+      padding: 0 0.6rem;
+      display: inline-block;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: var(--color-grey-light-3-2);
+      }
+    }
   }
 }
