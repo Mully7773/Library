@@ -15,7 +15,7 @@
       var(--color-secondary),
       var(--color-secondary-light-2) 60%
     );
-    transition: all 1s ease-in;
+    transition: background-image 1s ease-in;
     z-index: 1;
     cursor: pointer;
 
@@ -38,6 +38,9 @@
 
     &:hover::before {
       opacity: 1;
+    }
+    &:hover {
+      color: var(--color-secondary-light-2);
     }
   }
 }
