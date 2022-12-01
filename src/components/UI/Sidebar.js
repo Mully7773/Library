@@ -1,9 +1,10 @@
+import AppTitle from "../AppTitle";
 import "./Sidebar.scss";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <p>Sidebar</p>
+      <AppTitle />
     </div>
   );
 };
