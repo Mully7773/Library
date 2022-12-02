@@ -36,6 +36,11 @@ const BookForm = (props) => {
       completionDate: new Date(date + "T00:00:00"),
     };
     console.log(bookData);
+
+    setTitle("");
+    setAuthor("");
+    setPage("");
+    setDate("");
   };
 
   return (
@@ -44,6 +49,7 @@ const BookForm = (props) => {
         <div className="new-book__input">
           <label>Title</label>
           <input
+            value={title}
             placeholder="Ender's Game"
             type="text"
             onChange={titleChangeHandler}
@@ -52,6 +58,7 @@ const BookForm = (props) => {
         <div className="new-book__input">
           <label>Author</label>
           <input
+            value={author}
             placeholder="Orson Scott Card"
             type="text"
             onChange={authorChangeHandler}
@@ -59,11 +66,16 @@ const BookForm = (props) => {
         </div>
         <div className="new-book__input">
           <label>Pages</label>
-          <input placeholder="324" type="number" onChange={pageChangeHandler} />
+          <input
+            value={page}
+            placeholder="324"
+            type="number"
+            onChange={pageChangeHandler}
+          />
         </div>
         <div className="new-book__input">
           <label>Date Completed</label>
-          <input type="date" onChange={dateChangeHandler} />
+          <input value={date} type="date" onChange={dateChangeHandler} />
         </div>
       </div>
       <div className="new-book__action">
