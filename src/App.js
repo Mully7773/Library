@@ -4,6 +4,7 @@ import Book from "./components/Book";
 import AppContainer from "./components/UI/AppContainer";
 import BookView from "./components/UI/BookView";
 import Sidebar from "./components/UI/Sidebar";
+import NewBook from "./components/NewBook/NewBook";
 
 const App = () => {
   const books = [
@@ -37,9 +38,16 @@ const App = () => {
     },
   ];
   // console.log(books);
+
+  const addBookHandler = (book) => {
+    console.log(book);
+  };
+
   return (
     <AppContainer>
-      <Sidebar />
+      <Sidebar>
+        <NewBook onAddBook={addBookHandler} />
+      </Sidebar>
       <BookView books={books} />
     </AppContainer>
   );

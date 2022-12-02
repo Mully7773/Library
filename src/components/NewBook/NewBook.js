@@ -7,7 +7,8 @@ const NewBook = (props) => {
       ...receivedBookData,
       id: uuidv4(),
     };
-    console.log(bookData);
+    // console.log(bookData);
+    props.onAddBook(bookData);
   };
 
   return (

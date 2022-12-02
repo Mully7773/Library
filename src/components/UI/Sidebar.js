@@ -4,12 +4,12 @@ import BookForm from "../NewBook/BookForm";
 import NewBook from "../NewBook/NewBook";
 import "./Sidebar.scss";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <div className="sidebar">
       <AppTitle />
       <AddBookButton />
-      <NewBook />
+      {props.children}
     </div>
   );
 };
