@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./BookForm.scss";
 
-const BookForm = (props) => {
+const BookForm = ({ onSaveBookHandler }) => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [page, setPage] = useState("");
@@ -35,7 +35,8 @@ const BookForm = (props) => {
       bookPages: page,
       completionDate: new Date(date + "T00:00:00"),
     };
-    console.log(bookData);
+    // console.log(bookData);
+    onSaveBookHandler(bookData);
 
     setTitle("");
     setAuthor("");
