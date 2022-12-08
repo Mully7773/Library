@@ -9,6 +9,7 @@ const BookView = (props) => {
       <div className="book-view">
         {props.books.map((book) => (
           <Book
+            key={book.id}
             title={book.bookTitle}
             author={book.bookAuthor}
             pages={book.pages}
