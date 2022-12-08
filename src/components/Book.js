@@ -3,10 +3,11 @@ import Card from "./UI/Card";
 import "./Book.scss";
 
 const Book = (props) => {
-  // console.log(props);
+  console.log(props.date);
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const day = props.date.toLocaleString("en-US", { day: "numeric" });
   const year = props.date.getFullYear();
+  console.log(year);
   return (
     <Card>
       <div className="book-description">

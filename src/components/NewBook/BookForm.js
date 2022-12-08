@@ -33,7 +33,7 @@ const BookForm = ({ onSaveBookHandler }) => {
       bookTitle: title,
       bookAuthor: author,
       bookPages: page,
-      completionDate: new Date(date + "T00:00:00"),
+      dateCompleted: new Date(date + "T00:00:00"),
     };
     // console.log(bookData);
     onSaveBookHandler(bookData);
