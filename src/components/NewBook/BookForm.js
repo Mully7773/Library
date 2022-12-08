@@ -53,6 +53,7 @@ const BookForm = ({ onSaveBookHandler }) => {
             value={title}
             placeholder="Ender's Game"
             type="text"
+            required
             onChange={titleChangeHandler}
           />
         </div>
@@ -62,6 +63,7 @@ const BookForm = ({ onSaveBookHandler }) => {
             value={author}
             placeholder="Orson Scott Card"
             type="text"
+            required
             onChange={authorChangeHandler}
           />
         </div>
@@ -71,12 +73,18 @@ const BookForm = ({ onSaveBookHandler }) => {
             value={page}
             placeholder="324"
             type="number"
+            required
             onChange={pageChangeHandler}
           />
         </div>
         <div className="new-book__input">
           <label>Date Completed</label>
-          <input value={date} type="date" onChange={dateChangeHandler} />
+          <input
+            value={date}
+            type="date"
+            required
+            onChange={dateChangeHandler}
+          />
         </div>
       </div>
       <div className="new-book__action">
