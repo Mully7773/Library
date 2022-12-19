@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import "./BookForm.scss";
 
 const BookForm = ({ onSaveBookHandler }) => {
-  // const [title, setTitle] = useState("");
-  // const [author, setAuthor] = useState("");
-  // const [page, setPage] = useState("");
-  // const [date, setDate] = useState("");
-
-  const [book, setBook] = useState({
+  const [book, setNewBook] = useState({
     title: "",
     author: "",
     pages: "",
@@ -15,31 +10,11 @@ const BookForm = ({ onSaveBookHandler }) => {
   });
 
   const handleFormChange = (e) => {
-    setBook({
+    setNewBook({
       ...book,
       [e.target.name]: e.target.value,
     });
   };
-
-  // const titleChangeHandler = (e) => {
-  //   console.log(e.target.value);
-  //   setTitle(e.target.value);
-  // };
-
-  // const authorChangeHandler = (e) => {
-  //   console.log(e.target.value);
-  //   setAuthor(e.target.value);
-  // };
-
-  // const pageChangeHandler = (e) => {
-  //   console.log(e.target.value);
-  //   setPage(e.target.value);
-  // };
-
-  // const dateChangeHandler = (e) => {
-  //   console.log(e.target.value);
-  //   setDate(e.target.value);
-  // };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -52,17 +27,12 @@ const BookForm = ({ onSaveBookHandler }) => {
     // console.log(bookData);
     onSaveBookHandler(bookData);
 
-    setBook({
+    setNewBook({
       title: "",
       author: "",
       pages: "",
       date: "",
     });
-
-    // setTitle("");
-    // setAuthor("");
-    // setPage("");
-    // setDate("");
   };
 
   return (

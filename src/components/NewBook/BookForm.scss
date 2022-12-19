@@ -22,6 +22,8 @@
       font-size: 1.5rem;
       padding: 0.1rem;
       transition: all 0.5s;
+      width: 100%;
+      max-width: 100%;
       &:focus {
         outline: none;
         background-color: var(--color-secondary-light-2);
