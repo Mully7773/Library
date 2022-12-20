@@ -6,11 +6,16 @@ import "./Book.scss";
 const Book = (props) => {
   const deleteBook = () => {
     console.log(props.id);
-    props.setBooks(
-      props.books.filter((book) => {
-        return book.id !== props.id;
-      })
+    const userConfirm = window.confirm(
+      "Are you sure you want to delete this book?"
     );
+    if (userConfirm) {
+      props.setBooks(
+        props.books.filter((book) => {
+          return book.id !== props.id;
+        })
+      );
+    }
   };
   // console.log(props.date);
   const month = props.date.toLocaleString("en-US", { month: "long" });
