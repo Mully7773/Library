@@ -3,12 +3,16 @@ import "./BookView.scss";
 
 const BookView = (props) => {
   console.log(props);
+  const heading = "My Books";
   return (
     <div className="book-view-container">
-      <h1 className="book-view-container__heading">My Books</h1>
+      <h1 className="book-view-container__heading">{heading}</h1>
       <div className="book-view">
         {props.books.map((book) => (
           <Book
+            books={props.books}
+            setBooks={props.setBooks}
+            id={book.id}
             key={book.id}
             title={book.bookTitle}
             author={book.bookAuthor}

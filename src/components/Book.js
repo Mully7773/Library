@@ -1,8 +1,17 @@
-import React from "react";
+import React, { cloneElement } from "react";
 import Card from "./UI/Card";
 import "./Book.scss";
+// props.books.filter((book) => { return book.id !== props.id)};
 
 const Book = (props) => {
+  const deleteBook = () => {
+    console.log(props.id);
+    props.setBooks(
+      props.books.filter((book) => {
+        return book.id !== props.id;
+      })
+    );
+  };
   // console.log(props.date);
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const day = props.date.toLocaleString("en-US", { day: "numeric" });
@@ -20,7 +29,9 @@ const Book = (props) => {
           {month} {day}, {year}
         </p>
         <div className="x-container">
-          <button className="x-container__button">&times;</button>
+          <button onClick={deleteBook} className="x-container__button">
+            &times;
+          </button>
         </div>
       </div>
     </Card>

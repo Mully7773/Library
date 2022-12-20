@@ -52,7 +52,7 @@ const App = () => {
       <Sidebar>
         <NewBook onAddBook={addBookHandler} />
       </Sidebar>
-      <BookView books={books} />
+      <BookView books={books} setBooks={setBooks} />
     </AppContainer>
   );
 };
