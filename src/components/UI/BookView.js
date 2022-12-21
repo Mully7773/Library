@@ -6,7 +6,7 @@ const BookView = (props) => {
   console.log(props);
   return (
     <div className="book-view-container">
-      <BookBar />
+      <BookBar books={props.books} />
       <div className="book-view">
         {props.books.map((book) => (
           <Book

@@ -1,6 +1,10 @@
 import "./BookBar.scss";
 
 const BookBar = (props) => {
+  console.log(props.books);
+  const pages = props.books.map((book) => book.pages);
+  const totalPages = pages.reduce((acc, cur) => cur + acc);
+
   const newDate = new Date();
   const year = newDate.getFullYear();
   const month = newDate.toLocaleString("default", { month: "long" });
@@ -13,7 +17,7 @@ const BookBar = (props) => {
     <div className="book-bar">
       <h1 className="book-bar__heading">{heading}</h1>
       <span className="book-bar__page-total">
-        <strong>1256</strong> {todayString}
+        <strong>{totalPages}</strong> {todayString}
       </span>
     </div>
   );
