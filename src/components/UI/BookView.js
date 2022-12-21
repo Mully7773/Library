@@ -1,12 +1,12 @@
 import Book from "../Book";
+import BookBar from "./BookBar";
 import "./BookView.scss";
 
 const BookView = (props) => {
   console.log(props);
-  const heading = "My Books";
   return (
     <div className="book-view-container">
-      <h1 className="book-view-container__heading">{heading}</h1>
+      <BookBar />
       <div className="book-view">
         {props.books.map((book) => (
           <Book
