@@ -3,7 +3,7 @@ import "./BookBar.scss";
 const BookBar = (props) => {
   console.log(props.books);
   const pages = props.books.map((book) => book.pages);
-  const totalPages = pages.reduce((acc, cur) => cur + acc);
+  const totalPages = pages.reduce((acc, cur) => cur + acc).toLocaleString();
 
   const newDate = new Date();
   const year = newDate.getFullYear();
