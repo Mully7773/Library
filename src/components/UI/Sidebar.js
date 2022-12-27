@@ -8,7 +8,7 @@ const Sidebar = (props) => {
   return (
     <div className="sidebar">
       <AppTitle />
-      <AddBookButton />
+      {/* <AddBookButton /> */}
       {props.children}
     </div>
   );
