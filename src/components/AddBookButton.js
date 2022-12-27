@@ -1,10 +1,13 @@
 import "./AddBookButton.scss";
 
-const AddBookButton = ({ onClick }) => {
+const AddBookButton = ({ onClick, showForm }) => {
+  const add = "Add Book";
+  const cancel = "Cancel";
   return (
     <div className="add-book-button-container">
       <button onClick={onClick} className="add-book-button-container__button">
-        Add Book
+        {!showForm && add}
+        {showForm && cancel}
       </button>
     </div>
   );

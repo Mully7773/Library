@@ -1,3 +1,10 @@
+.form {
+  transition: opacity 0.5s;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .new-book {
   &__inputs {
     display: flex;
@@ -45,4 +52,10 @@
       border-radius: 0.3rem;
     }
   }
+}
+
+.open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
