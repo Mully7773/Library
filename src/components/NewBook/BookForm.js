@@ -97,7 +97,9 @@ const BookForm = ({ onSaveBookHandler }) => {
           </div>
         </div>
         <div className="new-book__action">
-          <button type="submit">Submit</button>
+          <button className="submitBtn" type="submit">
+            Submit
+          </button>
         </div>
       </form>
     </>

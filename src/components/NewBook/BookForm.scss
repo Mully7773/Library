@@ -13,7 +13,7 @@
     text-align: left;
 
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -52,6 +52,17 @@
       border-radius: 0.3rem;
     }
   }
+}
+
+.submitBtn {
+  background: linear-gradient(
+    15deg,
+    var(--color-secondary),
+    var(--color-secondary-light-2) 60%
+  );
+  transition: background-image 1s ease-in;
+  z-index: 1;
+  font-weight: 500;
 }
 
 .open {
