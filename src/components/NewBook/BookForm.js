@@ -53,8 +53,9 @@ const BookForm = ({ onSaveBookHandler }) => {
       >
         <div className="new-book__inputs">
           <div className="new-book__input">
-            <label>Title</label>
+            <label htmlFor="title">Title</label>
             <input
+              id="title"
               name="title"
               value={book.title}
               placeholder="Ender's Game"
@@ -64,8 +65,9 @@ const BookForm = ({ onSaveBookHandler }) => {
             />
           </div>
           <div className="new-book__input">
-            <label>Author</label>
+            <label htmlFor="author">Author</label>
             <input
+              id="author"
               name="author"
               value={book.author}
               placeholder="Orson Scott Card"
@@ -75,8 +77,9 @@ const BookForm = ({ onSaveBookHandler }) => {
             />
           </div>
           <div className="new-book__input">
-            <label>Pages</label>
+            <label htmlFor="pages">Pages</label>
             <input
+              id="pages"
               name="pages"
               value={book.pages}
               placeholder="324"
@@ -86,8 +89,9 @@ const BookForm = ({ onSaveBookHandler }) => {
             />
           </div>
           <div className="new-book__input">
-            <label>Date Completed</label>
+            <label htmlFor="date">Date Completed</label>
             <input
+              id="date"
               name="date"
               value={book.date}
               type="date"
