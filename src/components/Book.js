@@ -5,16 +5,10 @@ import DeleteButton from "./DeleteButton";
 import DeleteModal from "./UI/DeleteModal";
 
 const Book = (props) => {
-  const [showModal, setShowModal] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-  // console.log(props.date);
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const day = props.date.toLocaleString("en-US", { day: "numeric" });
   const year = props.date.getFullYear();
-  // console.log(year);
-  // const onShowDeleteModal = (receivedModalState) => {
-  //   setShowModal(receivedModalState);
-  // };
 
   const deleteBook = () => {
     setShowDeleteModal(true);
@@ -22,7 +16,14 @@ const Book = (props) => {
 
   return (
     <>
-      {showDeleteModal && <DeleteModal />}
+      {showDeleteModal && (
+        <DeleteModal
+          setBooks={props.setBooks}
+          books={props.books}
+          id={props.id}
+          setShowDeleteModal={setShowDeleteModal}
+        />
+      )}
       <Card>
         <div className="book-description">
           <h2 className="book-description__book-title">{props.title}</h2>
@@ -36,9 +37,6 @@ const Book = (props) => {
           <DeleteButton
             // onShowDeleteModal={onShowDeleteModal}
             onClick={deleteBook}
-            setBooks={props.setBooks}
-            books={props.books}
-            id={props.id}
           />
         </div>
       </Card>

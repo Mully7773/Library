@@ -1,11 +1,6 @@
-import { useState } from "react";
 import "./DeleteButton.scss";
-import Button from "./UI/Button";
-import DeleteModal from "./UI/DeleteModal";
 
 const DeleteButton = ({ onClick }) => {
-  // const [showDeleteModal, setShowDeleteModal] = useState(false);
-
   // const deleteBook = () => {
   //   setShowDeleteModal(true);
   //   console.log(showDeleteModal);
@@ -21,11 +16,8 @@ const DeleteButton = ({ onClick }) => {
   // }
   // };
 
-  // props.onShowDeleteModal(showDeleteModal);
-
   return (
     <>
-      {/* {showDeleteModal && <DeleteModal />} */}
       <div className="x-container">
         <button onClick={onClick} className="x-container__button">
           &times;

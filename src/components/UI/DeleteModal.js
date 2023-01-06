@@ -2,6 +2,19 @@ import Button from "./Button";
 import "./DeleteModal.scss";
 
 const DeleteModal = (props) => {
+  const deleteBook = () => {
+    props.setBooks(
+      props.books.filter((book) => {
+        return book.id !== props.id;
+      })
+    );
+  };
+
+  const onDeny = () => {
+    props.setShowDeleteModal(false);
+    return;
+  };
+
   return (
     <>
       <div className="backdrop" onClick={props.onConfirm}></div>
@@ -12,8 +25,12 @@ const DeleteModal = (props) => {
           </h2>
         </header>
         <footer className="modal-container__footer">
-          <Button className="modal-container__btn">Yes</Button>
-          <Button className="modal-container__btn">No</Button>
+          <Button onClick={deleteBook} className="modal-container__btn">
+            Yes
+          </Button>
+          <Button onClick={onDeny} className="modal-container__btn">
+            No
+          </Button>
         </footer>
       </div>
     </>
