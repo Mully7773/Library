@@ -4,15 +4,6 @@
   align-items: center;
   justify-content: center;
   &__button {
-    border-radius: 0.1rem;
-    font-family: inherit;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    font-size: 1.4rem;
-    border: none;
-    padding: 0.8rem 3.2rem;
-    position: relative;
-
     background: linear-gradient(
       15deg,
       var(--color-secondary),

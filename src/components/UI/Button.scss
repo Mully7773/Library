@@ -1,0 +1,15 @@
+.button {
+  border-radius: 0.1rem;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  border: none;
+  padding: 0.8rem 3.2rem;
+  position: relative;
+  cursor: pointer;
+
+  :focus {
+    outline: none;
+  }
+}
