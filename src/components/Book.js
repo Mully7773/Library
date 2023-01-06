@@ -1,32 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./UI/Card";
 import "./Book.scss";
 import DeleteButton from "./DeleteButton";
+import DeleteModal from "./UI/DeleteModal";
 
 const Book = (props) => {
+  const [showModal, setShowModal] = useState(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   // console.log(props.date);
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const day = props.date.toLocaleString("en-US", { day: "numeric" });
   const year = props.date.getFullYear();
   // console.log(year);
+  // const onShowDeleteModal = (receivedModalState) => {
+  //   setShowModal(receivedModalState);
+  // };
+
+  const deleteBook = () => {
+    setShowDeleteModal(true);
+  };
+
   return (
-    <Card>
-      <div className="book-description">
-        <h2 className="book-description__book-title">{props.title}</h2>
-        <br></br>
-        <span className="book-description__by-text">by</span>
-        <p className="book-description__book-author">{props.author}</p>
-        <p className="book-description__book-pages">{props.pages} Pages</p>
-        <p className="book-description__date">
-          {month} {day}, {year}
-        </p>
-        <DeleteButton
-          setBooks={props.setBooks}
-          books={props.books}
-          id={props.id}
-        />
-      </div>
-    </Card>
+    <>
+      {showDeleteModal && <DeleteModal />}
+      <Card>
+        <div className="book-description">
+          <h2 className="book-description__book-title">{props.title}</h2>
+          <br></br>
+          <span className="book-description__by-text">by</span>
+          <p className="book-description__book-author">{props.author}</p>
+          <p className="book-description__book-pages">{props.pages} Pages</p>
+          <p className="book-description__date">
+            {month} {day}, {year}
+          </p>
+          <DeleteButton
+            // onShowDeleteModal={onShowDeleteModal}
+            onClick={deleteBook}
+            setBooks={props.setBooks}
+            books={props.books}
+            id={props.id}
+          />
+        </div>
+      </Card>
+    </>
   );
 };
 
