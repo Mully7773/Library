@@ -1,4 +1,6 @@
 import "./DeleteButton.scss";
+import Button from "./UI/Button";
+import DeleteModal from "./UI/DeleteModal";
 
 const DeleteButton = (props) => {
   const deleteBook = () => {
@@ -15,6 +17,7 @@ const DeleteButton = (props) => {
   };
   return (
     <div className="x-container">
+      {/* <DeleteModal /> */}
       <button onClick={deleteBook} className="x-container__button">
         &times;
       </button>

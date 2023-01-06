@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AddBookButton from "../AddBookButton";
+import Button from "../UI/Button";
 import "./BookForm.scss";
 
 const BookForm = ({ onSaveBookHandler }) => {
@@ -101,9 +102,9 @@ const BookForm = ({ onSaveBookHandler }) => {
           </div>
         </div>
         <div className="new-book__action">
-          <button className="submitBtn" type="submit">
+          <Button className="submitBtn" type="submit">
             Submit
-          </button>
+          </Button>
         </div>
       </form>
     </>
