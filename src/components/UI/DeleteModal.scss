@@ -15,7 +15,7 @@
   top: 50%;
   left: 50%;
   padding: 3rem;
-  width: 50%;
+  width: 40%;
   transform: translate(-50%, -50%);
   z-index: 10000;
   overflow: hidden;
@@ -27,13 +27,18 @@
   border-radius: 0.6rem;
   box-shadow: 0 2rem 4rem rgba(1, 1, 1, 0.1);
 
+  background-color: var(--color-primary-light);
   &__header {
     background-color: transparent;
   }
 
   &__heading {
-    color: var(--color-primary);
+    color: #fff;
     font-size: 1.8rem;
+  }
+
+  &__img {
+    height: 8rem;
   }
 
   &__footer {
@@ -46,5 +51,13 @@
   &__btn {
     background-color: var(--color-secondary-dark-1);
     color: #fff;
+    transition: all 0.2s;
+    box-shadow: 0px 0.8rem 1.5rem rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      outline: 1px solid #000;
+      background-color: transparent;
+      color: #000;
+    }
   }
 }
