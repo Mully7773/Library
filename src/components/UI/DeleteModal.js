@@ -17,7 +17,7 @@ const DeleteModal = (props) => {
 
   return (
     <>
-      <div className="backdrop" onClick={props.onConfirm}></div>
+      <div className="backdrop" onClick={onDeny}></div>
       <div className="modal-container">
         <header className="modal-container__header">
           <h2 className="modal-container__heading">
