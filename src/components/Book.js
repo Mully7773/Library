@@ -14,6 +14,11 @@ const Book = (props) => {
     setShowDeleteModal(true);
   };
 
+  const onDeny = () => {
+    props.setShowDeleteModal(false);
+    return;
+  };
+
   return (
     <>
       {showDeleteModal && (
@@ -22,6 +27,7 @@ const Book = (props) => {
           books={props.books}
           id={props.id}
           setShowDeleteModal={setShowDeleteModal}
+          onDeny={onDeny}
         />
       )}
       <Card>
