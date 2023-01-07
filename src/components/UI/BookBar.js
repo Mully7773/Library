@@ -3,7 +3,12 @@ import "./BookBar.scss";
 const BookBar = (props) => {
   console.log(props.books);
   const pages = props.books.map((book) => book.pages);
-  if (pages.length === 0) return;
+  if (pages.length === 0)
+    return (
+      <p className="empty-message">
+        There aren't any books yet. Try adding some!
+      </p>
+    );
   const totalPages = pages.reduce((acc, cur) => cur + acc).toLocaleString();
 
   const newDate = new Date();
