@@ -17,15 +17,22 @@ const BookBar = (props) => {
   const day = newDate.getDate();
   const todayString = `pages read as of today, ${month} ${day}, ${year}`;
 
+  const totalBooksString = `total books in your library`;
+
   const heading = "My Books";
 
   return (
-    <div className="book-bar">
-      <h1 className="book-bar__heading">{heading}</h1>
-      <span className="book-bar__page-total">
-        <strong>{totalPages}</strong> {todayString}
-      </span>
-    </div>
+    <>
+      <div className="book-bar">
+        <h1 className="book-bar__heading">{heading}</h1>
+        <div className="book-bar__page-info total-pages">
+          <strong>{totalPages}</strong> {todayString}
+        </div>
+        <div className="book-bar__page-info total-books">
+          <strong>{pages.length}</strong> {totalBooksString}
+        </div>
+      </div>
+    </>
   );
 };
 

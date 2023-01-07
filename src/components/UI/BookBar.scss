@@ -1,5 +1,6 @@
 .book-bar {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   align-items: baseline;
   padding: 0 2.4rem;
@@ -12,10 +13,19 @@
     color: var(--color-primary-light);
   }
 
-  &__page-total {
+  &__page-info {
     font-size: 1.6rem;
     color: var(--color-primary-light);
     letter-spacing: 0.1rem;
+  }
+
+  .total-pages {
+    justify-self: end;
+  }
+
+  .total-books {
+    grid-column: 2 / -1;
+    justify-self: end;
   }
 
   strong {
