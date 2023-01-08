@@ -1,7 +1,6 @@
 import Book from "../Book";
 import BookBar from "./BookBar";
 import "./BookView.scss";
-import DeleteModal from "./DeleteModal";
 
 const BookView = (props) => {
   console.log(props);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Book from "./components/Book";
 import AppContainer from "./components/UI/AppContainer";
@@ -39,6 +39,18 @@ const dummyData = [
 
 const App = () => {
   const [books, setBooks] = useState(dummyData);
+
+  useEffect(() => {
+    localStorage.setItem("storedBook", JSON.stringify(books));
+    console.log(books);
+  }, [books]);
+
+  useEffect(() => {
+    const books = JSON.parse(localStorage.getItem("storedBook"));
+    if (books) {
+      setBooks(books);
+    }
+  }, []);
 
   const addBookHandler = (book) => {
     setBooks((prevBooks) => {
