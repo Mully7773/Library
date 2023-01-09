@@ -38,19 +38,23 @@ const dummyData = [
 ];
 
 const App = () => {
-  const [books, setBooks] = useState(dummyData);
+  const [books, setBooks] = useState(() => {
+    const storedBooks = JSON.parse(localStorage.getItem("storedBook"));
+    console.log(storedBooks);
+    return storedBooks || [];
+  });
 
   useEffect(() => {
     localStorage.setItem("storedBook", JSON.stringify(books));
     console.log(books);
   }, [books]);
 
-  useEffect(() => {
-    const books = JSON.parse(localStorage.getItem("storedBook"));
-    if (books) {
-      setBooks(books);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storedBooks = JSON.parse(localStorage.getItem("storedBook"));
+  //   if (storedBooks) {
+  //     setBooks(storedBooks);
+  //   }
+  // }, []);
 
   const addBookHandler = (book) => {
     setBooks((prevBooks) => {
