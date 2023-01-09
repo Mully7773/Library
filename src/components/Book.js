@@ -5,12 +5,6 @@ import DeleteButton from "./DeleteButton";
 import DeleteModal from "./UI/DeleteModal";
 
 const Book = (props) => {
-  const options = {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  };
-
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   console.log(props.date);
   const fullDate = new Date(props.date).toLocaleDateString("en-US", {
@@ -18,13 +12,6 @@ const Book = (props) => {
     day: "numeric",
     year: "numeric",
   });
-  const month = props.date.toLocaleString("en-US", { month: "long" });
-  console.log(month);
-  const day = props.date.toLocaleString("en-US", { day: "numeric" });
-  // const year = props.date.toLocaleString("en-US", { year: "numeric" });
-  const parsedYear = new Date(props.date);
-  const year = parsedYear.getFullYear();
-  // const year = props.date.getFullYear();
 
   const deleteBook = () => {
     setShowDeleteModal(true);
