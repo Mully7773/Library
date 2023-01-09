@@ -13,6 +13,11 @@ const Book = (props) => {
 
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   console.log(props.date);
+  const fullDate = new Date(props.date).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
   const month = props.date.toLocaleString("en-US", { month: "long" });
   console.log(month);
   const day = props.date.toLocaleString("en-US", { day: "numeric" });
@@ -49,7 +54,8 @@ const Book = (props) => {
           <p className="book-description__book-author">{props.author}</p>
           <p className="book-description__book-pages">{props.pages} Pages</p>
           <p className="book-description__date">
-            {month} {day}, {year}
+            {/* {month} {day}, {year} */}
+            {fullDate}
           </p>
           <DeleteButton
             // onShowDeleteModal={onShowDeleteModal}

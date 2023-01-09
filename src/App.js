@@ -41,11 +41,43 @@ const App = () => {
   const [books, setBooks] = useState(() => {
     const storedBooks = JSON.parse(localStorage.getItem("storedBook"));
     console.log(storedBooks);
+    // const parsedStoredBooks = storedBooks.forEach((book) => {
+    //   new Date(book.dateCompleted);
+    // });
+    // console.log(parsedStoredBooks);
     return storedBooks || [];
   });
 
+  // const result = books.map((o) => ({
+  //   ...o,
+  //   dateCompleted: new Date(o.dateCompleted).toLocaleDateString("en-US", {
+  //     month: "long",
+  //     day: "numeric",
+  //     year: "numeric",
+  //   }),
+  // }));
+
   useEffect(() => {
-    localStorage.setItem("storedBook", JSON.stringify(books));
+    // console.log(books.dateCompleted);
+    // const test = books.map((book) => {
+    //   return Object.keys(book.dateCompleted).forEach(
+    //     (key) => book.dateCompleted[key]
+    //   );
+    // });
+    // console.log(test);
+
+    // This map is used to convert ISO timestamp to a readable date format. Copy all objects from books array, and all properties therein, then change dateCompleted format via toLocaleDateString() method. Set that result to local storage.
+    const result = books.map((o) => ({
+      ...o,
+      dateCompleted: new Date(o.dateCompleted).toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      }),
+    }));
+
+    // console.log(result);
+    localStorage.setItem("storedBook", JSON.stringify(result));
     console.log(books);
   }, [books]);
 
@@ -56,9 +88,20 @@ const App = () => {
   //   }
   // }, []);
 
+  console.log(books);
+
   const addBookHandler = (book) => {
+    // const parsedDateBook = {
+    //   ...book,
+    //   dateCompleted: new Date(book.dateCompleted).toLocaleDateString("en-US", {
+    //     month: "long",
+    //     day: "numeric",
+    //     year: "numeric",
+    //   }),
+    // };
     setBooks((prevBooks) => {
       return [book, ...prevBooks];
+      // return [parsedDateBook, ...prevBooks];
     });
     console.log(book);
   };
